@@ -29,10 +29,10 @@ RUN apk --no-cache add bash
 
 # copy payload code only
 COPY main.py ./
-COPY source_google_directory ./source_google_directory
+COPY source_google_directory-upgraded ./source_google_directory-upgraded
 
 ENV AIRBYTE_ENTRYPOINT "python /airbyte/integration_code/main.py"
 ENTRYPOINT ["python", "/airbyte/integration_code/main.py"]
 
 LABEL io.airbyte.version=0.1.9
-LABEL io.airbyte.name=airbyte/source-google-directory
+LABEL io.airbyte.name=airbyte/source-google-directory-upgraded
